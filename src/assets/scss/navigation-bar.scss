@@ -1,0 +1,82 @@
+.navigation-bar {
+  .list-active {
+    width: 24px;
+    height: 24px;
+    margin: 0 20px 0 0;
+    object-fit: contain;
+  }
+  .card-inactive {
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 20px;
+    object-fit: contain;
+  }
+  .select {
+    font-family: Rubik;
+    font-size: 27px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    color: #307fc1;
+    border: none;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(107deg, #01ae8f, #307fc1) 1;
+    outline: none;
+    border-radius: 0;
+    padding: 24px 0 3px;
+    height: 100%;
+    min-width: 226px;
+    .value {
+      width: 146px;
+      height: 32px;
+      margin: 0 12px 17px 0;
+      font-family: "Rubik";
+      font-size: 27px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.19;
+      letter-spacing: normal;
+      color: #5d6870;
+    }
+    .select::before {
+      border: none;
+    }
+  }
+  .select:focus {
+    background: transparent;
+  }
+  .value-rel {
+    position: relative;
+  }
+  .badge-conf {
+    width: 28px;
+    height: 20px;
+    display: inline-block;
+    padding: 0px 8px;
+    border-radius: 8px;
+    background-color: #307fc1;
+    color: white;
+    margin: 6px 24px 23px 12px;
+    position: absolute;
+    span {
+      width: 12px;
+      height: 20px;
+      display: inline-block;
+      font-family: "Rubic";
+      font-size: 14px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.43;
+      letter-spacing: normal;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      top: 0;
+    }
+  }
+}

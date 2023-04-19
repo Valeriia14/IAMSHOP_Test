@@ -1,0 +1,144 @@
+body {
+  font-family: sans-serif;
+  margin: 30px;
+}
+/*You can use [title] selector as well*/
+[data-title] {
+  position: relative;
+  cursor: pointer;
+}
+
+[data-title]:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -50px;
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 2px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  font-family: sans-serif;
+  white-space: nowrap;
+}
+[data-title]:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 8px;
+  display: inline-block;
+  color: #fff;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #000;
+}
+.select-wrapper {
+  position: relative;
+
+  .options-bottom-border {
+    top: 524px;
+    width: 305px;
+    transform: translate(5px, 0);
+    position: absolute;
+    height: 7px;
+    border-radius: 40px;
+    border: none;
+    background-color: #01ae8f;
+    z-index: 1;
+    background-image: linear-gradient(107deg, #01ae8f, #307fc1) 1;
+  }
+}
+.selecter {
+  height: 80px;
+  padding: 24px 0 3px;
+  border: none;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(107deg, #01ae8f, #307fc1) 1;
+  cursor: pointer;
+  .text {
+    font-family: Rubik;
+    font-size: 27px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    color: #307fc1;
+    margin-right: 12px;
+  }
+  .count {
+    padding: 0 8px;
+    border-radius: 8px;
+    background-color: #307fc1;
+    height: 20px;
+    color: white;
+    margin-right: 24px;
+  }
+}
+.options {
+  width: 313px;
+  z-index: 33;
+  position: absolute;
+  padding: 16px 0 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  list-style-type: none;
+
+  .option {
+    padding: 11px 47.3px 7px 20px;
+    top: 90px;
+    img {
+      margin-right: 20px;
+    }
+  }
+
+  li:hover {
+    cursor: pointer;
+    background-color: rgba(48, 127, 193, 0.07);
+    border-left: 1.8px solid #307fc1;
+  }
+}
+.general-selecter-wrapper {
+  position: relative;
+  width: 288px;
+}
+.general-selecter {
+  cursor: pointer;
+  width: 288px;
+  height: 40px;
+  margin: 10px 0 0;
+  padding: 11px 12px 10px 9px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  border: solid 1px grey;
+  background-color: #fff;
+}
+.general-selecter:hover {
+  border: solid 1px #307fc1;
+}
+.general-options {
+  width: 288px !important;
+  z-index: 33;
+  position: relative;
+  padding: 16px 0 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  list-style-type: none;
+
+  .option {
+    padding: 11px 47.3px 7px 20px;
+    color: #b4b4b4;
+    top: 90px;
+    img {
+      margin-right: 20px;
+    }
+  }
+
+  li:hover .option {
+    cursor: pointer;
+    background-color: rgba(48, 127, 193, 0.07);
+    color: black !important;
+  }
+}
