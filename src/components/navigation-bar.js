@@ -25,28 +25,6 @@ const NavigationBar = ({ setViewMethod, viewMethod }) => {
       <div className="d-flex flex-row justify-content-between align-items-center w-100">
         <div>
           <CustomSelect options={items} value={selectedItem} onChangeValue={(item) => setSelectedItem(item)} toggle={toggle} setToggle={(v)=>setToggle(v)}/>
-          {/* <FormControl variant="standard">
-            <Select
-              className="select"
-              value={selectedItem}
-              renderValue={(value) => (
-                <div className="value-rel">
-                  <span className="value">{value}</span>
-                  <span className="badge-conf"><span>3</span></span>
-                </div>
-              )}
-              onChange={(e) => setSelectedItem(e.target.value)}
-            >
-              {items.map((item, index) => (
-                <MenuItem value={item.value} key={index} className="pl-2">
-                  <div>
-                  <img src={"/assets/images/" + item.img_url} alt=""className="mr-2" />
-                  <span style={{marginLeft:10}}>{item.value}</span>
-                  </div>
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl> */}
         </div>
         <div className="d-flex flex-row justify-content-center">
           <a
