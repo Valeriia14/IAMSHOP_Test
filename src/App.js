@@ -1,6 +1,6 @@
 import Dashboard from './pages/dashboard';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/scss/app.scss';
 
 function App() {
   return (

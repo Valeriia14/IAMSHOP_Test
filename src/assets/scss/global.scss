@@ -1,8 +1,14 @@
-body {
-  font-family: sans-serif;
-  margin: 30px;
-}
 /*You can use [title] selector as well*/
+
+// declare colors
+$primary_color:#307fc1;
+$secondary_color:#01ae8f;
+$info_color:#265fb4;
+$primary_graident: linear-gradient(107deg, #682a94, #05afe0);
+$secondary_gradient: linear-gradient(107deg, #019cae, #307fc1);
+$tertiary_gradient:linear-gradient(107deg, #01ae8f, #307fc1);
+
+//custome title attribute
 [data-title] {
   position: relative;
   cursor: pointer;
@@ -31,114 +37,326 @@ body {
   border: 8px solid transparent;
   border-bottom: 8px solid #000;
 }
-.select-wrapper {
-  position: relative;
+// end custome title
 
+// custome role select
+.role-select-wrapper {
+  position: relative;
+  .role-selecter {
+    height: 80px;
+    padding: 12px 0 3px;
+    border: none;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-image: $tertiary_gradient 1;
+    cursor: pointer;
+    .text {
+      font-family: "Rubik";
+      font-size: 27px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.19;
+      letter-spacing: normal;
+      color: #5d6870;
+      margin-right: 14px;
+    }
+    .count {
+      padding: 0 8px;
+      border-radius: 8px;
+      background-color: $primary_color;
+      height: 20px;
+      color: white;
+      margin-right: 24px;
+      margin-top: -4px;
+      font-family: Rubik;
+      font-size: 14px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.43;
+      letter-spacing: normal;
+      text-align: center;
+    }
+    .arrow {
+      margin-top: -10px;
+    }
+  }
   .options-bottom-border {
-    top: 524px;
+    top: 449px;
     width: 305px;
     transform: translate(5px, 0);
     position: absolute;
     height: 7px;
     border-radius: 40px;
     border: none;
-    background-color: #01ae8f;
+    background-color: $secondary_color;
     z-index: 1;
-    background-image: linear-gradient(107deg, #01ae8f, #307fc1) 1;
+    background-image: $tertiary_gradient 1;
   }
-}
-.selecter {
-  height: 80px;
-  padding: 24px 0 3px;
-  border: none;
-  border-bottom-width: 4px;
-  border-bottom-style: solid;
-  border-image: linear-gradient(107deg, #01ae8f, #307fc1) 1;
-  cursor: pointer;
-  .text {
-    font-family: Rubik;
-    font-size: 27px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.19;
-    letter-spacing: normal;
-    color: #307fc1;
-    margin-right: 12px;
-  }
-  .count {
-    padding: 0 8px;
+  .options {
+    margin-top: 8px;
+    width: 313px;
+    z-index: 33;
+    position: absolute;
+    padding: 16px 0 14px;
     border-radius: 8px;
-    background-color: #307fc1;
-    height: 20px;
-    color: white;
-    margin-right: 24px;
-  }
-}
-.options {
-  width: 313px;
-  z-index: 33;
-  position: absolute;
-  padding: 16px 0 14px;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
-  background-color: #fff;
-  list-style-type: none;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    list-style-type: none;
 
-  .option {
-    padding: 11px 47.3px 7px 20px;
-    top: 90px;
-    img {
-      margin-right: 20px;
+    .option {
+      padding: 11px 47.3px 7px 20px;
+      top: 90px;
+      font-family: Rubik;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #000;
+
+      .option-title {
+        margin-left:20px;
+      }
     }
   }
 
   li:hover {
     cursor: pointer;
     background-color: rgba(48, 127, 193, 0.07);
-    border-left: 1.8px solid #307fc1;
+    border-left: 1.8px solid $primary_color;
+
+  }
+  li:hover .role-svg {
+    fill:$primary_color;
+    
+  }
+  li:hover .option-title{
+    color:$primary_color;
   }
 }
-.general-selecter-wrapper {
-  position: relative;
-  width: 288px;
-}
-.general-selecter {
-  cursor: pointer;
-  width: 288px;
-  height: 40px;
-  margin: 10px 0 0;
-  padding: 11px 12px 10px 9px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-  border: solid 1px grey;
-  background-color: #fff;
-}
-.general-selecter:hover {
-  border: solid 1px #307fc1;
-}
-.general-options {
-  width: 288px !important;
-  z-index: 33;
-  position: relative;
-  padding: 16px 0 14px;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
-  background-color: #fff;
-  list-style-type: none;
+//end role custome select
 
-  .option {
-    padding: 11px 47.3px 7px 20px;
-    color: #b4b4b4;
-    top: 90px;
-    img {
-      margin-right: 20px;
+// access type custome select
+.access-type-selecter-wrapper {
+  position: relative;
+  width: 288px;
+  padding-left: 16px;
+  .access-type-selecter {
+    cursor: pointer;
+    width: 288px;
+    height: 40px;
+    margin: 10px 0 0;
+    padding: 9px 12px 10px 9px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    border: solid 1px #ebebed;
+    background-color: #fff;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #282828;
+    .arrow {
+      margin-top: -3px;
     }
   }
+  .access-type-selecter-active{
+    border-radius: 5px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    border:1px solid $primary_color !important;
+  }
+  .access-type-options {
+    margin-top: 4px;
+    width: 288px !important;
+    z-index: 33;
+    position: relative;
+    padding: 16px 0 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    list-style-type: none;
 
-  li:hover .option {
-    cursor: pointer;
-    background-color: rgba(48, 127, 193, 0.07);
-    color: black !important;
+    .option {
+      padding: 11px 3px 7px 20px;
+      color: #b4b4b4;
+      top: 90px;
+      img {
+        margin-right: 15px;
+        display: none;
+      }
+    }
+    .option:hover {
+      cursor: pointer;
+      background-color: rgba(48, 127, 193, 0.07);
+      color: black !important;
+      margin: 0px 3px;
+    }
+    .option:hover img {
+      display: block;
+    }
+  }
+}
+// end access type custome select
+
+// quick custome search
+.quick-search {
+  width: 310px;
+  height: 32px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #d8d8dd;
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 8px 16.1px 8px 12px;
+  &:hover {
+    border: solid 1px $primary_color;
+  }
+  .add-on-icon {
+    width: 16px;
+    height: 16px;
+    margin: 0 15px 0px 0;
+    object-fit: contain;
+    &:hover {
+      border: solid 1px #d8d8dd;
+    }
+  }
+  .search-input {
+    width: 250.9px;
+    height: 16px;
+    font-family: Rubik;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    color: #a7a7a9;
+    border: none;
+  }
+  .search-input:focus-visible {
+    outline: none;
+  }
+  .search-input::placeholder {
+    font-family: Rubik;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    color: #a7a7a9;
+  }
+}
+//  end quick custome search
+
+// pagination custom
+.pagination {
+  .page-link {
+    padding: 13px 16.9px 12px 16.1px;
+    font-family: Rubik;
+    font-size: 14px !important;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #5d6870 !important;
+    height: 41px;
+    width: 39px;
+    padding: 13px 16.9px 12px 16.1px !important;
+  }
+  .prev {
+    width: 41px;
+  }
+  .page-item .hun {
+    width: 54px !important;
+  }
+}
+// end pagination custome
+.MuiBackdrop-root {
+  backdrop-filter: blur(1px) !important;
+}
+// modal custome
+.modal-title {
+  height: 95px;
+  border-radius: 8;
+  padding-left: 32px;
+  background-size: cover;
+  background-image: url("../../../public/assets/images/bg-copy.png"),
+    $primary_graident;
+}
+.modal-title h4 {
+  color: white;
+}
+.modal-close {
+  margin-right: 20%;
+}
+.modal-btn {
+  width: 89px;
+  height: 48px;
+  padding: 16px 24px;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -2px rgba(48, 127, 193, 0.55);
+  border: solid 1px $primary_color;
+  background-color: $primary_color;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #fff;
+}
+.modal-body {
+  padding-left: 30px !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  font-family: 'Rubik';
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: #000;
+  min-height: 176px;
+  padding: 32px 357px 32px 30px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.11);
+  background-color: #fff;
+}
+.modal-body .muted {
+  font-family: 'Rubik';
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #9b9b9b;
+}
+.modal-bottom {
+  padding-left: 32px;
+  padding-top: 40px;
+}
+//end modal custome
+
+.responsive-mobile {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 870px) {
+  .responsive-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .quick-search {
+    margin-top: 20px;
   }
 }

@@ -12,7 +12,7 @@ const style = {
   bgcolor: 'background.paper',
   borderRadius:6,
   height:2000,
-  boxShadow: 24,
+  boxShadow: 100,
   overflow:'hidden'
 };
 
@@ -57,7 +57,7 @@ export default function TransitionsModal({openModal, handleClose, data}) {
                 <div className='col-md-4'>{data.environment}</div>
               </div>
               <div className='row'>
-                <div className='col-md-3 muted'>{data.end_date}</div>
+                <div className='col-md-3 muted'>End Date</div>
                 <div className='col-md-4 '>{data.end_date}</div>
               </div>
             </div>

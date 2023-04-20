@@ -1,0 +1,63 @@
+.access-type {
+  width: 325px;
+  height: 173px;
+  margin: 0 24px 0 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+
+  .access-type-title {
+    height: 55px;
+    padding-top: 14px;
+    padding-left: 19px;
+  }
+  .access-type-title span {
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+  }
+  .access-type-body {
+    width: 325px;
+    height: 118px;
+    padding: 13px 18px 30px 0px;
+    border-radius: 5px;
+    border: solid 1px #efeff1;
+    background-color: #fbfbfd;
+  }
+  .access-type-body span {
+    padding-left: 29px;
+    padding-top: 25px;
+    font-family: Rubik;
+    font-size: 10px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #b4b4b4;
+  }
+  .select-list-value {
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #282828;
+    width: 288px;
+    height: 40px;
+    margin: 10px 0 0;
+    padding: 11px 12px 10px 9px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  .select-list-value:focus {
+    border: solid 1px $primary_color;
+  }
+}
